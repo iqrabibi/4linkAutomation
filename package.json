@@ -1,0 +1,26 @@
+{
+  "name": "4linkautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1" ,
+    "runScript" : "npx cypress run --headed --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iqrabibi/4linkAutomation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iqrabibi/4linkAutomation/issues"
+  },
+  "homepage": "https://github.com/iqrabibi/4linkAutomation#readme",
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^12.5.1",
+    "cypress-mochawesome-reporter": "^3.2.3"
+  }
+}
