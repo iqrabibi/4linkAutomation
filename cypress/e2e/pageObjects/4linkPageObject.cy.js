@@ -13,9 +13,13 @@ class pageObjectsModal{
         sideBarArrow: "#sidebar-arrow",
         insideTemprature: "[aria-label='Inside Temperature']",
         sensorConfig : "//select[contains(@id,'cmd')]",
+        alertYesButton: "#popup > .alignright > .filled",
         caliborationValue : "//label[text()='Calibration']/following-sibling::input",
         saveButton: "//button[text()='Save']",
-        saveAlert : "//*[@id='save-notification-slideout']"
+        saveAlert : "//*[@id='save-notification-slideout']" ,
+        nameLocator: "//*[@id='breadcrumb-container']/a[3]" ,
+        noneLocator: "//*[@class='list']/tbody/tr[2]/td/a[@class='name']" ,
+        nameField: "//*[text()='Name']/following-sibling::input"
     }
 
     //Mthods
@@ -69,5 +73,18 @@ class pageObjectsModal{
         cy.xpath(this.mainScreenLocators.saveAlert).should('be.visible')
     }
 
+    setName(name)
+    {
+       
+        cy.xpath(this.mainScreenLocators.nameLocator).click()
+        cy.get(this.mainScreenLocators.alertYesButton).click()
+        cy.xpath(this.mainScreenLocators.noneLocator).click()
+        cy.xpath(this.mainScreenLocators.nameField).type(name)
+    }
+
+    validateSavedName(name)
+    {
+        cy.xpath(this.mainScreenLocators.noneLocator).should('contains',name)
+    }
 }
 export default pageObjectsModal

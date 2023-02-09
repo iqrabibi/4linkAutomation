@@ -2,5 +2,6 @@
     "email" : "iqrabibi25@yahoo.com" ,
     "password" : "Test_Password_175" ,
     "sensorConfig" : "Software" ,
-    "caliboration" : 48
+    "caliboration" : 48,
+    "name" : "test user"
 }

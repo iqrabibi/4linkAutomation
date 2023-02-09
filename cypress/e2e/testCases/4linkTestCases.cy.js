@@ -18,5 +18,6 @@ describe('4 link sample test cases',()=> {
     pageObject.enterCaliborationValue(this.userData.caliboration)  // enter caliboration value
     pageObject.clickSave() // save button clicked
     pageObject.validateDataSavedSuccessfully() // validate data saved successfully
+    pageObject.setName(this.userData.name) // set the name of equipment
   })
 })
